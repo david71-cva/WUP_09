@@ -153,4 +153,8 @@ After running the code. It was clear to see the 5 regressor models. The best 2 r
 
 ## Final Summary Statements
 
+In this assignment. I was tasked to compare the regessions models of the different types of the fish. I had to compare the weight and length and the width of these fishes: The Roach, Pike, and Perch. I was estimated the weight and length and the width. I was made to use the adjusted R-square value to get the best 2 element regressor. For the perch the best was height and the width. for the pike it was the length and the width, and lastly, for the roach it weight and length.
+
+
+
 
