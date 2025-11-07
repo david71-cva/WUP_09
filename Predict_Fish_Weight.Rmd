@@ -122,8 +122,35 @@ subsets(Pikemodel1automate,statistic="adjr2",legend="bottomright",main="Adjusted
 
 ## Roach
 
+```{r}
+Roach <- filter(fish, Species == "Roach")
+Roach <- select(Roach, -Species) 
+```
+
+
 ### Best Models
 
+```{r}
+library(leaps)
+Roachmodel1automate <-
+    regsubsets(Weight ~ .,
+               data = Roach,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.Roach <- summary(Pikemodel1automate)
+as.data.frame(summary.Pike$outmat)
+library(car)
+subsets(Roachmodel1automate,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
+
+
+After running the code. It was clear to see the 5 regressor models. The best 2 regressor models and the best model was lenght 3 and width. 
 ### Best Two regressor model
 
 ## Final Summary Statements
+
+
